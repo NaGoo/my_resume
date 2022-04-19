@@ -1,7 +1,7 @@
 <div class="py-2 shadow-sm">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
     <div fxLayout="row" fxLayoutAlign="space-between center" class="px-2">
-      <div><p class="font-extrabold text-violet-500 text-5xl p-3 border border-violet-500" ngClass.xs="font-bold text-2xl py-1 px-2">N.</p></div>
+      <div><p class="font-extrabold text-orange-500 text-5xl p-3 border border-orange-500" ngClass.xs="font-bold text-2xl py-1 px-2">N.</p></div>
       <div class="flex space-x-5" ngClass.xs="space-x-0">
         <div class="flex menu" fxHide.lt-sm>
           <p class="py-2.5 px-4 font-bold text-sm cursor-pointer">Home</p>
@@ -9,14 +9,85 @@
           <p class="py-2.5 px-4 font-bold text-sm cursor-pointer">Blog</p>
         </div>
         <div fxHide.lt-sm>
-          <button class="bg-violet-500 rounded-full py-2 px-4 text-white font-medium">Hire Me</button>
+          <button class="bg-orange-500 rounded-full py-2 px-4 text-white font-medium">Hire Me</button>
         </div>
         <div fxHide.gt-xs>
-          <div class="bg-violet-500 rounded pt-1 pb-0.5 px-2 text-white font-medium">
+          <div class="bg-orange-500 rounded pt-1 pb-0.5 px-2 text-white font-medium">
             <mat-icon class="text-2xl">menu</mat-icon>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+<section fxLayout="row" fxLayout.xs="column-reverse" class="mb-5 bg-gray-100 p-10" fxLayoutAlign="start center" fxLayoutAlign.xs="center center">
+  <div fxFlex="13" class="my-10 flex flex-row justify-center sm:flex-col lg:flex-col">
+    <div class="p-3"><i class="icofont-facebook icofont-2x"></i></div>
+    <div class="p-3"><i class="icofont-instagram icofont-2x"></i></div>
+    <div class="p-3"><i class="icofont-linkedin icofont-2x"></i></div>
+    <div class="p-3"><i class="icofont-twitter icofont-2x"></i></div>
+  </div>
+  <div fxFlex="45" class="flex flex-col justify-center space-y-3">
+    <small class="font-bold text-orange-500 text-lg tracking-wide"  ngClass.xs="text-sm font-normal text-center">Hi, I am</small>
+    <p class="py-3 name text-6xl tracking-widest" ngClass.xs="text-4xl py-1 text-center" ngClass.sm="text-3xl">NAGARAJAN S</p>
+    <p class="font-bold text-2xl tracking-wide" ngClass.xs="text-lg py-0 text-center">Software Developer</p>
+    <p class="tracking-wide py-5 p font-medium leading-5 justify-center" ngClass.xs="text-center"> I am NaGoo, an Angular developer. I am passionate
+      about developing elegant websites. I am young into my career, constantly learning and hoping to share.</p>
+    <div class="flex justify-start space-x-5 my-10" ngClass.xs="my-10 justify-center">
+      <button class="px-6 py-3 rounded-full bg-orange-500"><span class="font-medium text-white">Download CV</span></button>
+      <button class="px-6 py-3 rounded-full border-2 border-orange-500"><p class="font-medium">Contact Me</p> </button>
+    </div>
+  </div>
+  <div fxFlex="42" fxHide.xs>
+<!--    <div class="flex justify-center pt-64" ngClass.sm="pt-20">-->
+<!--      <img src="../assets/profile/pro.png" class="pro" ngClass.sm="prosm" alt="profile">-->
+<!--    </div>-->
+  </div>
+  <div fxFlex fxHide.gt-xs gdAlignColumns="center">
+    <div class="border-orange-500 p-3 border-2 rounded-full items-center">
+      <img src="../assets/profile/my_profile.jpg" class="h-48 w-48 rounded-full" alt="my profile">
+    </div>
+  </div>
+</section>
+<div class="pb-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+  <mat-card  fxLayout="row" fxLayoutAlign="space-between center" class="banner z-10 -mt-20 rounded-full shadow-xl">
+    <div fxFlex gdAlignRows="center">
+      <div class="flex space-x-5" ngClass.xs="flex-col space-x-0 text-center justify-center">
+        <div>
+          <i fxHide.xs class="text-orange-500 icofont-badge icofont-4x"></i>
+          <i fxHide.gt-xs class="text-orange-500 icofont-badge icofont-2x"></i>
+        </div>
+        <div class="pt-2">
+          <p class="font-medium text-lg" ngClass.xs="text-xs">2 Years Job</p>
+          <small class="font-medium text-orange-500">Experience</small>
+        </div>
+      </div>
+    </div>
+    <div class="border h-24 border-gray-200"></div>
+    <div fxFlex gdAlignRows="center">
+      <div class="flex space-x-5" ngClass.xs="flex-col space-x-0 text-center justify-center">
+        <div>
+          <i fxHide.xs class="text-orange-500 icofont-dashboard-web icofont-4x"></i>
+          <i fxHide.gt-xs class="text-orange-500 icofont-dashboard-web icofont-2x"></i>
+        </div>
+        <div class="pt-2">
+          <p class="font-medium text-lg" ngClass.xs="text-xs">6 Projects</p>
+          <small class="font-medium text-orange-500">Completed</small>
+        </div>
+      </div>
+    </div>
+    <div class="border h-24 border-gray-200"></div>
+    <div fxFlex gdAlignRows="center">
+      <div class="flex space-x-5" ngClass.xs="flex-col space-x-0 text-center justify-center">
+        <div>
+          <i fxHide.xs class="text-orange-500 icofont-support icofont-4x"></i>
+          <i fxHide.gt-xs class="text-orange-500 icofont-support icofont-2x"></i>
+        </div>
+        <div class="pt-2">
+          <p class="font-medium text-lg" ngClass.xs="text-xs">Support</p>
+          <small class="font-medium text-orange-500">Online 24/7</small>
+        </div>
+      </div>
+    </div>
+  </mat-card>
 </div>
