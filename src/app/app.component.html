@@ -26,6 +26,7 @@
 <div>
   <router-outlet></router-outlet>
 </div>
+<div class="py-10"></div>
 <div class="footer p-2 sm:p-10 lg:p-10">
   <div class="max-w-7xl mx-auto px-2 py-12 sm:px-6 lg:px-8">
     <div class="my-5 text-center">
@@ -34,7 +35,7 @@
     </div>
     <div class="my-5">
       <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
-        <div fxFlex="75">
+        <div fxFlex="65">
           <div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 sm:gap-4 lg:gap-4">
               <mat-form-field appearance="outline" floatLabel="always">
@@ -55,25 +56,25 @@
             <button class="text-white font-medium tracking-wide px-5 py-3 rounded-full bg-orange-500">Send Message</button>
           </div>
         </div>
-        <div fxFlex="20" gdAlignRows="start" fxHide.xs>
-          <div class="flex space-x-5">
-            <div class="pt-3"><i class="icofont-ui-call text-lg text-white p-3 bg-orange-400 rounded-full"></i></div>
+        <div fxFlex="30" fxFlex.xs="10" fxLayout="column" fxLayout.xs="row wrap" gdAlignRows="start" fxHide.xs>
+          <div class="flex  space-x-2 lg:space-x-5 sm:space-x-5">
+            <div class="pt-3"><i class="icofont-ui-call text-sm lg:text-lg sm:text-lg text-white p-3 bg-orange-400 rounded-full"></i></div>
             <div>
-              <p class="primary font-bold text-xl tracking-wide">Call Me</p>
+              <p class="primary font-bold text-lg tracking-wide">Call Me</p>
               <small class="text-gray-400 ">+91 7397098513</small>
             </div>
           </div>
-          <div class="flex space-x-5">
-            <div class="pt-3"><i class="icofont-email text-lg text-white p-3 bg-orange-400 rounded-full"></i></div>
+          <div class="flex space-x-2 lg:space-x-5 sm:space-x-5">
+            <div class="pt-3"><i class="icofont-email text-sm lg:text-lg sm:text-lg text-white p-3 bg-orange-400 rounded-full"></i></div>
             <div>
-              <p class="primary font-bold text-xl tracking-wide">Email </p>
+              <p class="primary font-bold text-lg tracking-wide">Email </p>
               <small class="text-gray-400 ">nagucse05@gmail.com</small>
             </div>
           </div>
           <div class="flex space-x-5">
             <div class="pt-3"><i class="icofont-location-pin text-lg text-white p-3 bg-orange-400 rounded-full"></i></div>
             <div>
-              <p class="primary font-bold text-xl tracking-wide">Location</p>
+              <p class="primary font-bold text-lg tracking-wide">Location</p>
               <small class="text-gray-400 ">TamilNadu, India.</small>
             </div>
           </div>
