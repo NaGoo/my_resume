@@ -1,145 +1,120 @@
-<div class="py-2 shadow-sm">
+<div class="header">
+  <div class="py-2 shadow-sm">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="px-2" fxLayout="row" fxLayoutAlign="space-between center">
+        <div><p class="font-extrabold text-orange-500 text-5xl p-3 border border-orange-500"
+                ngClass.xs="font-bold text-2xl py-1 px-2">N.</p></div>
+        <div class="flex space-x-5" ngClass.xs="space-x-0">
+          <div class="flex menu" fxHide.lt-sm>
+            <p class="py-2.5 px-4 font-bold text-sm cursor-pointer secondary">Home</p>
+            <p class="py-2.5 px-4 font-bold text-sm cursor-pointer primary">My Intro</p>
+            <p class="py-2.5 px-4 font-bold text-sm cursor-pointer primary">Achievements</p>
+          </div>
+          <div fxHide.lt-sm>
+            <button class="bg-orange-500 rounded-full py-2 px-4 text-white font-medium">Hire Me</button>
+          </div>
+          <div fxHide.gt-xs>
+            <div class="bg-orange-500 rounded pt-1 pb-0.5 px-2 text-white font-medium">
+              <mat-icon class="text-2xl">menu</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+<div class="footer bg-gray-100 p-2 sm:p-10 lg:p-10">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-    <div fxLayout="row" fxLayoutAlign="space-between center" class="px-2">
-      <div><p class="font-extrabold text-orange-500 text-5xl p-3 border border-orange-500" ngClass.xs="font-bold text-2xl py-1 px-2">N.</p></div>
-      <div class="flex space-x-5" ngClass.xs="space-x-0">
-        <div class="flex menu" fxHide.lt-sm>
-          <p class="py-2.5 px-4 font-bold text-sm cursor-pointer">Home</p>
-          <p class="py-2.5 px-4 font-bold text-sm cursor-pointer">My Intro</p>
-          <p class="py-2.5 px-4 font-bold text-sm cursor-pointer">Blog</p>
-        </div>
-        <div fxHide.lt-sm>
-          <button class="bg-orange-500 rounded-full py-2 px-4 text-white font-medium">Hire Me</button>
-        </div>
-        <div fxHide.gt-xs>
-          <div class="bg-orange-500 rounded pt-1 pb-0.5 px-2 text-white font-medium">
-            <mat-icon class="text-2xl">menu</mat-icon>
+    <div class="my-5 text-center">
+      <p class="font-bold secondary text-sm sm:text-lg lg:text-lg tracking-wide">Contact Me</p>
+      <p class="primary py-2 font-extrabold text-2xl sm:text-5xl lg:text-5xl">Get in Touch</p>
+    </div>
+    <div class="my-5">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
+        <div fxFlex="75">
+          <div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 sm:gap-4 lg:gap-4">
+              <mat-form-field appearance="outline" floatLabel="always">
+                <input type="text" matInput placeholder="Name">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+<!--                <mat-label>Email</mat-label>-->
+                <input type="text" matInput placeholder="Email">
+              </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline" class="w-full">
+<!--              <mat-label>Subject</mat-label>-->
+              <input type="text" matInput placeholder="Subject">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-full">
+              <textarea type="text" matInput rows="4" placeholder="Message"></textarea>
+            </mat-form-field>
+            <button class="text-white font-medium tracking-wide px-5 py-3 rounded-full bg-orange-500">Send Message</button>
           </div>
         </div>
+        <div fxFlex="20" gdAlignRows="start" fxHide.xs>
+          <div class="flex space-x-5">
+            <div class="pt-3"><i class="icofont-ui-call text-lg text-white p-3 bg-orange-400 rounded-full"></i></div>
+            <div>
+              <p class="primary font-bold text-xl tracking-wide">Call Me</p>
+              <small class="text-gray-400 ">+91 7397098513</small>
+            </div>
+          </div>
+          <div class="flex space-x-5">
+            <div class="pt-3"><i class="icofont-email text-lg text-white p-3 bg-orange-400 rounded-full"></i></div>
+            <div>
+              <p class="primary font-bold text-xl tracking-wide">Email </p>
+              <small class="text-gray-400 ">nagucse05@gmail.com</small>
+            </div>
+          </div>
+          <div class="flex space-x-5">
+            <div class="pt-3"><i class="icofont-location-pin text-lg text-white p-3 bg-orange-400 rounded-full"></i></div>
+            <div>
+              <p class="primary font-bold text-xl tracking-wide">Location</p>
+              <small class="text-gray-400 ">TamilNadu, India.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-10 bg shadow-sm rounded-bl-lg rounded-br-lg">
+    <div class="flex justify-center">
+      <div class="flex flex-col">
+        <div class="flex justify-center"><p class="font-extrabold text-orange-500 text-5xl p-3 border border-orange-500">N.</p></div>
+        <p class="text-center text-white pt-5 font-normal">FullStack Developer</p>
+        <div class="flex space-x-5 flex-wrap justify-center leading-10 px-5 border border-orange-500 m-2">
+          <small class="text-white font-medium">Angular</small>
+          <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">NodeJS</small>
+<!--          <small class="text-white font-medium">|</small>-->
+<!--          <small class="text-white font-medium">NestJS</small>-->
+<!--          <small class="text-white font-medium">|</small>-->
+<!--          <small class="text-white font-medium">ExpressJS</small>-->
+          <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">HTML</small>
+          <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">CSS</small>
+          <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">Bootstrap</small>
+          <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">Tailwind</small>
+          <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">JavaScript</small>
+          <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">TypeScript</small>
+        </div>
+        <div class="my-3 flex justify-center">
+          <div class="p-3"><i class="icofont-github text-lg bg-orange-500 rounded p-1.5 text-white"></i></div>
+          <div class="p-3"><i class="icofont-instagram text-lg bg-orange-500 rounded p-1.5 text-white"></i></div>
+          <div class="p-3"><i class="icofont-linkedin text-lg bg-orange-500 rounded p-1.5 text-white"></i></div>
+          <div class="p-3"><i class="icofont-twitter text-lg bg-orange-500 rounded p-1.5 text-white"></i></div>
+        </div>
+        <em class="text-center text-gray-300 py-3 font-normal">nagarajan.subramanian513@gmail.com</em>
       </div>
     </div>
   </div>
 </div>
-<section fxLayout="row" fxLayout.xs="column-reverse" class="mb-5 bg-gray-100 p-10"  fxLayoutAlign="start center" fxLayoutAlign.xs="center center">
-  <div fxFlex="13" class="my-10 flex flex-row justify-center sm:flex-col lg:flex-col">
-    <div class="p-3"><i class="icofont-facebook icofont-2x"></i></div>
-    <div class="p-3"><i class="icofont-instagram icofont-2x"></i></div>
-    <div class="p-3"><i class="icofont-linkedin icofont-2x"></i></div>
-    <div class="p-3"><i class="icofont-twitter icofont-2x"></i></div>
-  </div>
-  <div fxFlex="40" fxFlex.sm="45" class="flex flex-col justify-center space-y-3">
-    <small class="font-bold text-orange-500 text-lg tracking-wide"  ngClass.xs="text-sm font-normal text-center">Hi, I am</small>
-    <p class="py-3 name text-6xl tracking-widest" ngClass.xs="text-4xl py-1 text-center" ngClass.sm="text-3xl">NAGARAJAN S</p>
-    <p class="font-bold text-2xl tracking-wide" ngClass.xs="text-lg py-0 text-center">Software Developer</p>
-    <p class="tracking-wide py-5 p font-medium leading-5 justify-center" ngClass.xs="text-center"> I am NaGoo, an Angular developer. I am passionate
-      about developing elegant websites. I am young into my career, constantly learning and hoping to share.</p>
-    <div class="flex justify-start space-x-5 my-10" ngClass.xs="my-10 justify-center">
-      <button class="px-6 py-3 rounded-full bg-orange-500"><span class="font-medium text-white">Download CV</span></button>
-      <button class="px-6 py-3 rounded-full border-2 border-orange-500"><p class="font-medium">Contact Me</p> </button>
-    </div>
-  </div>
-  <div fxFlex="42" fxHide.xs gdAlignRows="center">
-      <img src="../assets/profile/pro.png" class="pro" alt="profile">
-  </div>
-  <div fxFlex fxHide.gt-xs gdAlignColumns="center">
-    <div class="border-orange-500 p-3 border-2 rounded-full items-center">
-      <img src="../assets/profile/pro.png" class="h-48 w-48 rounded-full" alt="my profile">
-    </div>
-  </div>
-</section>
-
-<!--banner-->
-<div class="pb-10 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-  <mat-card  fxLayout="row" fxLayoutAlign="space-between center" class="banner z-10 -mt-20 rounded-full shadow-xl">
-    <div fxFlex gdAlignRows="center">
-      <div class="flex space-x-5" ngClass.xs="flex-col space-x-0 text-center justify-center">
-        <div>
-          <i fxHide.xs class="text-orange-500 icofont-badge icofont-4x"></i>
-          <i fxHide.gt-xs class="text-orange-500 icofont-badge icofont-2x"></i>
-        </div>
-        <div class="pt-2">
-          <p class="font-medium text-lg" ngClass.xs="text-xs">2 Years Job</p>
-          <small class="font-medium text-orange-500">Experience</small>
-        </div>
-      </div>
-    </div>
-    <div class="border h-24 border-gray-200"></div>
-    <div fxFlex gdAlignRows="center">
-      <div class="flex space-x-5" ngClass.xs="flex-col space-x-0 text-center justify-center">
-        <div>
-          <i fxHide.xs class="text-orange-500 icofont-dashboard-web icofont-4x"></i>
-          <i fxHide.gt-xs class="text-orange-500 icofont-dashboard-web icofont-2x"></i>
-        </div>
-        <div class="pt-2">
-          <p class="font-medium text-lg" ngClass.xs="text-xs">6 Projects</p>
-          <small class="font-medium text-orange-500">Completed</small>
-        </div>
-      </div>
-    </div>
-    <div class="border h-24 border-gray-200"></div>
-    <div fxFlex gdAlignRows="center">
-      <div class="flex space-x-5" ngClass.xs="flex-col space-x-0 text-center justify-center">
-        <div>
-          <i fxHide.xs class="text-orange-500 icofont-support icofont-4x"></i>
-          <i fxHide.gt-xs class="text-orange-500 icofont-support icofont-2x"></i>
-        </div>
-        <div class="pt-2">
-          <p class="font-medium text-lg" ngClass.xs="text-xs">Support</p>
-          <small class="font-medium text-orange-500">Online 24/7</small>
-        </div>
-      </div>
-    </div>
-  </mat-card>
-</div>
-
-
-<!--My Intro-->
-<section  class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="100px">
-  <div fxFlex="25" fxHide.xs gdAlignRows="start" class="w-full p-3 border-2 border-orange-500">
-    <div>
-      <img src="../assets/profile/pro.png" alt="profile">
-    </div>
-  </div>
-  <div fxFlex="40">
-    <div class="flex flex-col justify-start">
-      <small class="font-bold text-orange-500 text-lg tracking-wide"  ngClass.xs="text-sm font-normal text-center">My Intro</small>
-      <p class="pt-3 name text-5xl tracking-widest" ngClass.xs="text-4xl py-1 text-center" ngClass.sm="text-3xl">About Me</p>
-      <p class="tracking-wide py-5 p font-medium leading-5 justify-center" ngClass.xs="text-center"> I am NaGoo, an Angular developer. I am passionate
-        about developing elegant websites. I am young into my career, constantly learning and hoping to share.</p>
-      <div class="my-3 flex flex-col space-y-3" ngClass.xs="px-2">
-        <div class="flex justify-start space-x-16">
-          <div class="flex space-x-5">
-            <div><i class="text-orange-400 pr-3 icofont-user-alt-3 text-lg"></i></div>
-            <p class="font-medium text-sm">&nbsp;Name</p>
-          </div>
-          <div>:</div>
-          <small class="font-medium text-gray-400 text-sm">Nagarajan S</small>
-        </div>
-        <div class="flex justify-start space-x-16">
-          <div class="flex space-x-5">
-            <div><i class="text-orange-400 pr-3 icofont-ui-call text-lg"></i></div>
-            <p class="font-medium text-sm">Phone</p>
-          </div>
-          <div>:</div>
-          <small class="font-medium text-gray-400 text-sm">+91 7397098513</small>
-        </div>
-        <div class="flex justify-start space-x-16">
-          <div class="flex space-x-5">
-            <div><i class="text-orange-400 pr-3 text-lg icofont-email"></i></div>
-            <p class="font-medium text-sm">Email</p>
-          </div>
-          <div>&nbsp;:</div>
-          <small class="font-medium text-gray-400 text-sm">nagucse05@gamil.com</small>
-        </div>
-      </div>
-      <div class="my-10">
-        <p class="font-bold text-xl tracking-wide" ngClass.xs="text-lg py-0 text-center">My Intrests</p>
-        <div class="py-3 flex space-x-8 justify-center sm:justify-start lg:justify-start">
-          <div class="flex"><i class="text-orange-500 pr-3 text-2xl icofont-retro-music-disk"></i><p class="pt-1 font-medium text-sm">Music</p></div>
-          <div class="flex"><i class="text-orange-500 pr-3 text-2xl icofont-travelling"></i><p class="pt-1 font-medium text-sm">Travel</p></div>
-          <div class="flex"><i class="text-orange-500 pr-3 text-2xl icofont-camera"></i><p class="pt-1 font-medium text-sm">Photo</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>

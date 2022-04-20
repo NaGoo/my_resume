@@ -1,25 +1,10 @@
-.menu{
-  p{
-    color: #0D0A5D;
-  }
-}
-p{
-  color: #0D0A5D;
-}
-.p{color: gray}
-section {
-  min-height: 70vh;
+
+.header {
+  position: fixed;
+  z-index: 999;
+  background-color: #ffffff;
   width: 100vw;
 }
-.name {
-  color: #0D0A5D;
-  font-weight: 900;
-}
-
-:host ::ng-deep .mat-card {
-  border-radius: 100px;
-  padding: 20px 30px;
-}
-.pro {
-  height: 50vh;
+:host ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick  {
+  color: #F87315;
 }

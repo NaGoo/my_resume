@@ -1,0 +1,16 @@
+
+section {
+  min-height: 80vh;
+  width: 100vw;
+}
+.name {
+  color: #0D0A5D;
+  font-weight: 900;
+}
+:host ::ng-deep .mat-card {
+  border-radius: 100px;
+  padding: 20px 30px;
+}
+.pro {
+  height: 50vh;
+}
