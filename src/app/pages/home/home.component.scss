@@ -2,6 +2,7 @@
 section {
   min-height: 80vh;
   width: 100vw;
+  scroll-snap-align: center;
 }
 @media (min-width:801px)  {
   section {

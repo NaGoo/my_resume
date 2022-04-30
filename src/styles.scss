@@ -4,7 +4,10 @@
 @tailwind utilities;
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
 
 p{margin: 0 !important;}
 .primary {color: #0D0A5D;}
