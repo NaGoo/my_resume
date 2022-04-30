@@ -8,3 +8,10 @@
 :host ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick  {
   color: #F87315;
 }
+.gradient {
+  position: absolute;
+  z-index: 1000;
+  background: radial-gradient(circle closest-side, #F87315, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}

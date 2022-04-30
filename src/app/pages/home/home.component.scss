@@ -3,6 +3,16 @@ section {
   min-height: 80vh;
   width: 100vw;
 }
+@media (min-width:801px)  {
+  section {
+    min-height: 60vh;
+  }
+}
+@media (min-width:1025px)  {
+  section {
+    min-height: 85vh;
+  }
+}
 .name {
   color: #0D0A5D;
   font-weight: 900;
@@ -14,4 +24,8 @@ section {
 .pro {
   height: 100%;
   width: 100%;
+}
+.introProfile {
+  height: 400px;
+  width: 400px;
 }
