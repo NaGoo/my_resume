@@ -14,3 +14,11 @@ p{margin: 0 !important;}
 .secondary {color: #FEA158;}
 .bg{background-color: #081E48}
 .color1 {color: #2F4E84}
+[type='text']:focus, [type='time']:focus, [multiple]:focus {
+  box-shadow: none !important;
+}
+
+.alert {
+  background-color: #fa4242;
+  color: #ffffff;
+}

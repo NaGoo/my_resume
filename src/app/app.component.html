@@ -37,28 +37,26 @@
     <div class="my-5">
       <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
         <div fxFlex="65">
-          <div>
+          <form [formGroup]="mailForm">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 sm:gap-4 lg:gap-4">
               <mat-form-field appearance="outline" floatLabel="always">
-                <input type="text" matInput placeholder="Name">
+                <input type="text" matInput placeholder="Name" formControlName="name">
               </mat-form-field>
               <mat-form-field appearance="outline">
-<!--                <mat-label>Email</mat-label>-->
-                <input type="text" matInput placeholder="Email">
+                <input type="text" matInput maxlength="10" placeholder="mobile" formControlName="mobile">
               </mat-form-field>
             </div>
             <mat-form-field appearance="outline" class="w-full">
-<!--              <mat-label>Subject</mat-label>-->
-              <input type="text" matInput placeholder="Subject">
+              <input type="text" matInput placeholder="Subject" formControlName="subject">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-full">
-              <textarea type="text" matInput rows="4" placeholder="Message"></textarea>
+              <textarea type="text" matInput rows="4" placeholder="Message" formControlName="message"></textarea>
             </mat-form-field>
-            <button class="text-white font-medium tracking-wide px-5 py-3 rounded-full bg-orange-500">Send Message</button>
-          </div>
+         <button class="text-white font-medium tracking-wide px-5 py-3 rounded-full bg-orange-500" (click)="sendMail()">Send Message</button>
+          </form>
         </div>
         <div class="mt-3" fxFlex="30" fxFlex.xs="10" fxLayout="column" fxLayout.xs="row wrap" gdAlignRows="start" fxHide.xs>
-          <div class="flex mb-5 space-x-2 lg:space-x-5 sm:space-x-5">
+          <div type="tel" class="flex mb-5 space-x-2 lg:space-x-5 sm:space-x-5">
             <div class="pt-3"><i class="icofont-ui-call text-sm lg:text-lg sm:text-lg text-white p-3 bg-orange-400 rounded-full"></i></div>
             <div>
               <p class="primary font-bold text-lg tracking-wide">Call Me</p>

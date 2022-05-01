@@ -23,6 +23,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "jspdf",
+              "raf",
+              "canvg",
+              "@babel/runtime-corejs3",
+              "core-js",
+              "xlsx",
+              "@babel/runtime"
+            ],
             "outputPath": "dist/resume",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -45,8 +54,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
