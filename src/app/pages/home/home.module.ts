@@ -8,7 +8,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {ChatBotComponent} from "../chat-bot/chat-bot.component";
 import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -17,15 +17,16 @@ import {FormsModule} from "@angular/forms";
     HomeComponent,
     ChatBotComponent
   ],
-  imports: [
-    CommonModule,
-    homeRouting,
-    MatCardModule,
-    FlexLayoutModule,
-    MatButtonModule,
-    MatIconModule,
-    MatBottomSheetModule,
-    FormsModule
-  ]
+    imports: [
+        CommonModule,
+        homeRouting,
+        MatCardModule,
+        FlexLayoutModule,
+        MatButtonModule,
+        MatIconModule,
+        MatBottomSheetModule,
+        FormsModule,
+        ReactiveFormsModule
+    ]
 })
 export class HomeModule { }

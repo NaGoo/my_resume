@@ -27,3 +27,9 @@
     transform: translateY(0em);
   }
 }
+
+.messageSection {
+  height: 48vh;
+  overflow-y: scroll;
+  margin: 0;
+}
