@@ -1,0 +1,35 @@
+<div class="p-3 bg-orange-500 min-h-10">
+  <div class="flex justify-between">
+    <div  class="flex space-x-2">
+      <div>
+        <img class="h-14 w-14 rounded-full p-1" src="../../../assets/profile/bot.png" alt="">
+      </div>
+      <div class="pt-2"><p class="font-semibold tracking-wide text-sm text-white">NaGoo's Bot</p>
+        <div class="logo isAni" *ngIf="inputText === ''">
+          <span class="text-white text-xs">T</span>
+          <span class="text-white text-xs">y</span>
+          <span class="text-white text-xs">p</span>
+          <span class="text-white text-xs">i</span>
+          <span class="text-white text-xs">n</span>
+          <span class="text-white text-xs">g</span>
+          <span class="text-white text-xs">.</span>
+          <span class="text-white text-xs">.</span>
+          <span class="text-white text-xs">.</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <mat-icon class="cursor-pointer text-gray-50 hover:bg-red-600 hover:rounded-full" (click)="close()">close</mat-icon>
+    </div>
+  </div>
+</div>
+
+<div class="py-20"></div>
+<div class="fixed bottom-1 z-10 py-2 pl-2 bg-gray-100 rounded-full w-full">
+  <form (submit)='send()'>
+    <div class="input-group flex">
+      <input type="text" class="rounded-full pl-3 w-full"  placeholder="Type your message">
+      <button mat-icon-button><mat-icon class="text-orange-500">send</mat-icon></button>
+    </div>
+  </form>
+</div>

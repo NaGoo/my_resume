@@ -3,6 +3,9 @@
 import {AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import { jsPDF } from "jspdf";
 import html2canvas from 'html2canvas';
+import {MatBottomSheet} from '@angular/material/bottom-sheet';
+import {ChatBotComponent} from "../chat-bot/chat-bot.component";
+
 
 @Component({
   selector: 'app-home',
@@ -15,6 +18,18 @@ export class HomeComponent {
   screenHeight: any;
   screenWidth: any;
   @ViewChild('pdfTable', {static: false}) pdfTable: ElementRef | undefined;
+
+  constructor(
+    private readonly matBottomSheet: MatBottomSheet,
+  ) {
+  }
+
+  openChatBot(): void {
+    this.matBottomSheet.open(ChatBotComponent, {
+      disableClose: false,
+      panelClass: 'bot'
+    });
+  }
 
   downloadAsPDF(id: any) {
     let data: any = document.getElementById(id);

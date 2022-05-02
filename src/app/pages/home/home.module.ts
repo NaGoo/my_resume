@@ -6,12 +6,16 @@ import {MatCardModule} from "@angular/material/card";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import {ChatBotComponent} from "../chat-bot/chat-bot.component";
+import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
+import {FormsModule} from "@angular/forms";
 
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    ChatBotComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +24,8 @@ import {MatIconModule} from "@angular/material/icon";
     FlexLayoutModule,
     MatButtonModule,
     MatIconModule,
+    MatBottomSheetModule,
+    FormsModule
   ]
 })
 export class HomeModule { }
