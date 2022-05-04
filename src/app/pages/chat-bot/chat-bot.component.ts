@@ -66,7 +66,7 @@ export class ChatBotComponent implements OnInit {
     if (this.chatForm.get('msg')?.value) {
       this.msgs.push({isMe: false, msg: this.chatForm.get('msg')?.value, time: this.today});
       if (text.length > 20) {
-        this.msgs.push({isMe: true, msg: 'SORRY!, I dont get it.', time: this.today});
+        this.assignMessage('SORRY!, I dont get it.', false);
       } else {
         if (text.includes('fuck') || text.includes('love') || text.includes('ex')) {
           this.assignMessage('SORRY!, I dont have answer for that...', false);
