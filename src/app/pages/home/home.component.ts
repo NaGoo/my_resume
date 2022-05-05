@@ -15,8 +15,6 @@ import {ChatBotComponent} from "../chat-bot/chat-bot.component";
 export class HomeComponent {
 
   visible = false;
-  screenHeight: any;
-  screenWidth: any;
   @ViewChild('pdfTable', {static: false}) pdfTable: ElementRef | undefined;
 
   constructor(

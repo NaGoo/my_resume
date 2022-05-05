@@ -9,6 +9,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {ChatBotComponent} from "../chat-bot/chat-bot.component";
 import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatRippleModule} from "@angular/material/core";
 
 
 
@@ -26,7 +27,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
         MatIconModule,
         MatBottomSheetModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        MatRippleModule
     ]
 })
 export class HomeModule { }

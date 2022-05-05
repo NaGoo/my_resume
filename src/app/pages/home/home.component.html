@@ -20,7 +20,9 @@
         <div class="flex justify-start space-x-5 my-10" ngClass.xs="my-10 justify-center">
           <button type="button" class="px-6 py-3 rounded-full bg-orange-500" (click)="downloadAsPDF('resume')"><span class="font-medium text-white">Download CV</span>
           </button>
-          <button type="button" class="px-6 py-3 rounded-full border-2 border-orange-500"><p class="font-medium primary">Contact Me</p>
+          <button type="button"
+                  matRipple
+                  [matRippleCentered]="true" class="px-6 py-3 rounded-full border-2 border-orange-500"><p class="font-medium primary">Contact Me</p>
           </button>
         </div>
       </div>
@@ -85,7 +87,7 @@
       <div fxLayout="row" fxLayout.xs="column-reverse"
            fxLayoutAlign="center center" fxLayoutGap="80px">
         <div class="w-full" fxFlex="25" fxFlex.sm="35">
-          <img class="introProfile" alt="profile" src="../../../assets/lottie/intro.gif">
+          <img class="introProfile" alt="profile" src="../../../assets/profile/intro1.svg">
         </div>
         <div fxFlex="40">
           <div class="flex flex-col justify-start">
@@ -94,11 +96,11 @@
             <p class="pt-3 name text-5xl tracking-widest" ngClass.sm="text-3xl" ngClass.xs="text-4xl py-1 text-center">
               About
               Me</p>
-            <p class="tracking-wide py-3 text-gray-600 font-medium leading-5 justify-center" ngClass.xs="text-center">&nbsp;&nbsp;&nbsp; I
+            <p class="tracking-wide py-5 text-gray-600 font-medium leading-5 justify-center" ngClass.xs="text-center">&nbsp;&nbsp;&nbsp; I
               am NaGoo, an
               Angular developer. I am passionate
               about developing elegant websites. I am young into my career, constantly learning and hoping to share.</p>
-            <div class="my-3 flex flex-col space-y-3" ngClass.xs="px-2">
+            <div class="flex flex-col space-y-3" ngClass.xs="px-2">
               <div class="flex justify-start space-x-12">
                 <div class="flex space-x-5">
                   <div><i class="text-orange-400 pr-3 icofont-user-alt-3 text-lg"></i></div>
