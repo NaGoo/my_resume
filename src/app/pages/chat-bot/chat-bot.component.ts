@@ -69,9 +69,9 @@ export class ChatBotComponent implements OnInit {
         this.assignMessage('SORRY!, I dont get it.', false);
       } else {
         if (text.includes('fuck') || text.includes('love') || text.includes('ex')) {
-          this.assignMessage('SORRY!, I dont have answer for that...', false);
+          this.assignMessage('SORRY!, I dont have answer for that...', true);
         } else if (text.includes('bye') || text.includes('get lost')) {
-          this.assignMessage('Ok, Bye.', false);
+          this.assignMessage('Ok, Bye.', true);
         } else if (text.includes('sorry') || text.includes('sry') || text.includes('Sorry') || text.includes('SORRY')) {
           this.assignMessage('hmm.', false);
         } else if (text.includes('thanks') || text.includes('thank you') || text.includes('tq')) {
