@@ -39,7 +39,7 @@ export class ChatBotComponent implements OnInit {
       msg: ['']
     });
     const a = new Date().getHours();
-    this.chatService.messages.next([{isMe: true, msg: `${a < 12 ? 'Good Morning!': a < 18 ? 'Good Afternoon' : 'Good Evening'}, how can I help you?`, time: ''}]);
+    this.chatService.messages.next([{isMe: true, msg: `${a < 12 ? 'Good Morning!': a < 18 ? 'Good Afternoon' : 'Good Evening'}, How can I help you?`, time: ''}]);
   }
 
   ngOnInit(): void {
@@ -70,7 +70,7 @@ export class ChatBotComponent implements OnInit {
       } else {
         if (text.includes('fuck') || text.includes('love') || text.includes('ex')) {
           this.assignMessage('SORRY!, I dont have answer for that...', true);
-        } else if (text.includes('bye') || text.includes('get lost')) {
+        } else if (text.includes('Bye') ||text.includes('bye') || text.includes('get lost')) {
           this.assignMessage('Ok, Bye.', true);
         } else if (text.includes('sorry') || text.includes('sry') || text.includes('Sorry') || text.includes('SORRY')) {
           this.assignMessage('hmm.', false);
@@ -86,16 +86,13 @@ export class ChatBotComponent implements OnInit {
         ) {
           this.assignMessage('I will never share this number with anyone else.', false);
         } else if (text.includes('hi') || text.includes('Hi')) {
-          this.assignMessage('Hi there, Im ChatBot version0.1', false);
-          this.assignMessage('how can I help you?', false);
+          this.assignMessage('Hi there, Im ChatBot version0.1. How can I help you?', false);
         } else if (text.includes('hello') || text.includes('Hello')) {
-          this.assignMessage('Hello, Im ChatBot version0.1', false);
-          this.assignMessage('how can I help you?', false);
+          this.assignMessage('Hello, Im ChatBot version0.1. How can I help you?', false);
         } else if (text.includes('nothing') || text.includes('no need') || text.includes('no') || text.includes('No')) {
           this.assignMessage('Okay then, Bye Take Care.', true);
         }else if (text.includes('ok') || text.includes('Ok') || text.includes('OK') || text.includes('Okay') || text.includes('okay')) {
-          this.assignMessage('Okay.', false);
-          this.assignMessage('how can I help you?', false);
+          this.assignMessage('Okay.How can I help you?', false);
         }
 
         else {
