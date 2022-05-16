@@ -5,6 +5,7 @@ import { jsPDF } from "jspdf";
 import html2canvas from 'html2canvas';
 import {MatBottomSheet} from '@angular/material/bottom-sheet';
 import {ChatBotComponent} from "../chat-bot/chat-bot.component";
+import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 
 
 @Component({
@@ -19,6 +20,7 @@ export class HomeComponent {
 
   constructor(
     private readonly matBottomSheet: MatBottomSheet,
+    private readonly matDialog: MatDialog,
   ) {
   }
 
@@ -26,6 +28,12 @@ export class HomeComponent {
     this.matBottomSheet.open(ChatBotComponent, {
       disableClose: false,
       panelClass: 'bot'
+    });
+  }
+  openDialog(): void {
+    this.matDialog.open(BuildComponent, {
+      disableClose: true,
+      panelClass: 'dialog'
     });
   }
 
@@ -51,5 +59,24 @@ export class HomeComponent {
       pdf.save('nagarajan-resume.pdf');
     });
 
+  }
+}
+
+
+
+@Component({
+  selector: 'app-dev',
+  templateUrl: './dev.html',
+  styleUrls: ['./home.component.scss']
+})
+export class BuildComponent {
+  constructor(
+    public readonly matDialogRef: MatDialogRef<BuildComponent>
+  ) {
+  }
+
+
+  close() {
+    this.matDialogRef.close();
   }
 }

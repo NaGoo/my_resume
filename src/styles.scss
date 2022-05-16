@@ -27,3 +27,9 @@ p{margin: 0 !important;}
   border-top-left-radius: 10px !important;
   border-top-right-radius: 10px !important;
 }
+.dialog {
+  mat-dialog-container {
+    padding: 0 !important;
+    border-radius: 10px;
+  }
+}

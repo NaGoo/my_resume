@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HomeComponent} from './home.component';
+import {BuildComponent, HomeComponent} from './home.component';
 import {homeRouting} from "./home.route";
 import {MatCardModule} from "@angular/material/card";
 import {FlexLayoutModule} from "@angular/flex-layout";
@@ -10,13 +10,15 @@ import {ChatBotComponent} from "../chat-bot/chat-bot.component";
 import {MatBottomSheetModule} from "@angular/material/bottom-sheet";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatRippleModule} from "@angular/material/core";
+import {MatDialogModule} from "@angular/material/dialog";
 
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ChatBotComponent
+    ChatBotComponent,
+    BuildComponent
   ],
     imports: [
         CommonModule,
@@ -28,7 +30,8 @@ import {MatRippleModule} from "@angular/material/core";
         MatBottomSheetModule,
         FormsModule,
         ReactiveFormsModule,
-        MatRippleModule
+        MatRippleModule,
+      MatDialogModule
     ]
 })
 export class HomeModule { }
