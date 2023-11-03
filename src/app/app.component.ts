@@ -16,9 +16,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   mailForm: FormGroup;
 
   constructor(public el: ElementRef<HTMLElement>,
-              public readonly fb : FormBuilder,
-              public readonly matSnackBar : MatSnackBar,
-              ) {
+              public readonly fb: FormBuilder,
+              public readonly matSnackBar: MatSnackBar,
+  ) {
     this.mailForm = this.fb.group({
       name: ['', Validators.required],
       mobile: ['', Validators.required],
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   sendMail() {
     if (this.mailForm.get('name')?.value && this.mailForm.get('mobile')?.value && this.mailForm.get('subject')?.value && this.mailForm.get('message')?.value) {
-      window.location.href = 'mailto:nagucse05@gmail.com?subject=' + `${this.mailForm.get('subject')?.value}`+
+      window.location.href = 'mailto:nagucse05@gmail.com?subject=' + `${this.mailForm.get('subject')?.value}` +
         '&body=' + `Hi, Im ${this.mailForm.get('name')?.value} ${this.mailForm.get('message')?.value} ,Please contact me on ${this.mailForm.get('mobile')?.value}`;
     } else {
       this.matSnackBar.open('Please fill all the details', '', {

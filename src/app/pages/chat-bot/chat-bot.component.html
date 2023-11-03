@@ -2,11 +2,11 @@
   <div class="flex justify-between">
     <div class="flex space-x-2">
       <div>
-        <img class="h-14 w-14 rounded-full p-1" src="../../../assets/profile/bot.png" alt="">
+        <img alt="" class="h-14 w-14 rounded-full p-1" src="../../../assets/profile/bot.png">
       </div>
       <div class="pt-2"><p class="font-semibold tracking-wide text-sm text-white">NaGoo's Bot</p>
-        <small class="text-white text-xs" *ngIf="!isEnable">Online</small>
-        <div class="logo isAni" *ngIf="isEnable">
+        <small *ngIf="!isEnable" class="text-white text-xs">Online</small>
+        <div *ngIf="isEnable" class="logo isAni">
           <span class="text-white text-xs">T</span>
           <span class="text-white text-xs">y</span>
           <span class="text-white text-xs">p</span>
@@ -20,23 +20,27 @@
       </div>
     </div>
     <div>
-      <mat-icon class="cursor-pointer text-gray-50 hover:bg-white hover:text-orange-500 hover:rounded-full" (click)="close()">close
+      <mat-icon (click)="close()"
+                class="cursor-pointer text-gray-50 hover:bg-white hover:text-orange-500 hover:rounded-full">close
       </mat-icon>
     </div>
   </div>
 </div>
-<div class="messageSection px-2 pb-20 bg-gray-100" #scrollMe>
+<div #scrollMe class="messageSection px-2 pb-20 bg-gray-100">
   <div class="mt-3 flex justify-center">
-    <p class="text-xs px-3 rounded-full bg-gray-200 py-0.5 tracking-wide font-medium">{{today | date: 'EEEE MMMM d'}}</p>
+    <p
+      class="text-xs px-3 rounded-full bg-gray-200 py-0.5 tracking-wide font-medium">{{today | date: 'EEEE MMMM d'}}</p>
   </div>
-  <div class="px-3 sm:px-5 lg:px-5 md:px-5 mt-3 flex flex-col" *ngFor="let m of msgs; index as i">
-    <div class="mb-2 rounded-full flex flex-col py-2 px-5 border-orange-500 border bg-orange-50 w-10/12" *ngIf="m['isMe']">
+  <div *ngFor="let m of msgs; index as i" class="px-3 sm:px-5 lg:px-5 md:px-5 mt-3 flex flex-col">
+    <div *ngIf="m['isMe']"
+         class="mb-2 rounded-full flex flex-col py-2 px-5 border-orange-500 border bg-orange-50 w-10/12">
       <div class="flex justify-between space-x-2">
-       <div><p class="font-normal text-sm tracking-wide">{{m['msg']}}</p></div>
+        <div><p class="font-normal text-sm tracking-wide">{{m['msg']}}</p></div>
         <div class="min-w-fit"><small class="text-xs pb-1 text-gray-400">{{today | date: 'h:mm a'}}</small></div>
       </div>
     </div>
-    <div class="ml-20 mt-3 flex  flex-col justify-end rounded-full bg-blue-50 py-2 px-5 border-blue-500 border" *ngIf="!m['isMe'] && i > 0">
+    <div *ngIf="!m['isMe'] && i > 0"
+         class="ml-20 mt-3 flex  flex-col justify-end rounded-full bg-blue-50 py-2 px-5 border-blue-500 border">
       <div class="flex justify-between space-x-2">
         <div class="min-w-fit"><small class="text-xs pb-1 text-gray-400">{{today | date: 'h:mm a'}}</small></div>
         <div><p class="font-normal text-sm tracking-wide">{{m['msg']}}</p></div>
@@ -47,8 +51,9 @@
 <div class="fixed bottom-1 z-10 py-2 pl-2 bg-gray-100 w-full">
   <form [formGroup]="chatForm">
     <div class="input-group flex px-2">
-      <input type="text" class="rounded-full pl-3 w-full" (keyup)="callFunction($event)" formControlName="msg"  placeholder="Type your message">
-      <button mat-icon-button type="button" (click)="sendMessage()">
+      <input (keyup)="callFunction($event)" class="rounded-full pl-3 w-full" formControlName="msg" placeholder="Type your message"
+             type="text">
+      <button (click)="sendMessage()" mat-icon-button type="button">
         <mat-icon class="text-orange-500">send</mat-icon>
       </button>
     </div>

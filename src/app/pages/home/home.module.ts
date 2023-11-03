@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {BuildComponent, HomeComponent} from './home.component';
 import {homeRouting} from "./home.route";
 import {MatCardModule} from "@angular/material/card";
@@ -13,25 +13,25 @@ import {MatRippleModule} from "@angular/material/core";
 import {MatDialogModule} from "@angular/material/dialog";
 
 
-
 @NgModule({
   declarations: [
     HomeComponent,
     ChatBotComponent,
     BuildComponent
   ],
-    imports: [
-        CommonModule,
-        homeRouting,
-        MatCardModule,
-        FlexLayoutModule,
-        MatButtonModule,
-        MatIconModule,
-        MatBottomSheetModule,
-        FormsModule,
-        ReactiveFormsModule,
-        MatRippleModule,
-      MatDialogModule
-    ]
+  imports: [
+    CommonModule,
+    homeRouting,
+    MatCardModule,
+    FlexLayoutModule,
+    MatButtonModule,
+    MatIconModule,
+    MatBottomSheetModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatRippleModule,
+    MatDialogModule
+  ]
 })
-export class HomeModule { }
+export class HomeModule {
+}

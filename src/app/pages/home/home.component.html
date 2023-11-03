@@ -3,28 +3,38 @@
     <section class="mb-5 bg-gray-100 px-10 pb-20 pt-24" fxLayout="row" fxLayout.xs="column-reverse"
              fxLayoutAlign="start center" fxLayoutAlign.xs="center center">
       <div class="my-10 flex flex-row justify-center sm:flex-col lg:flex-col" fxFlex="13">
-        <div class="p-3"><a href="https://www.facebook.com/na.goo.39" target="_blank"><i class="icofont-facebook icofont-2x primary cursor-pointer"></i></a></div>
-        <div class="p-3"><a href="https://www.instagram.com/mr_nagoo" target="_blank"><i class="icofont-instagram icofont-2x primary cursor-pointer"></i></a></div>
-        <div class="p-3"><a href="https://www.linkedin.com/in/nagarajan-s-9898b6191/" target="_blank"><i class="icofont-linkedin icofont-2x primary cursor-pointer"></i></a></div>
-        <div class="p-3"><a href="https://twitter.com/mr_nagoo" target="_blank"><i class="icofont-twitter icofont-2x primary cursor-pointer"></i></a></div>
+        <div class="p-3"><a href="https://www.facebook.com/na.goo.39" target="_blank"><i
+          class="icofont-facebook icofont-2x primary cursor-pointer"></i></a></div>
+        <div class="p-3"><a href="https://www.instagram.com/mr_nagoo" target="_blank"><i
+          class="icofont-instagram icofont-2x primary cursor-pointer"></i></a></div>
+        <div class="p-3"><a href="https://www.linkedin.com/in/nagarajan-s-9898b6191/" target="_blank"><i
+          class="icofont-linkedin icofont-2x primary cursor-pointer"></i></a></div>
+        <div class="p-3"><a href="https://twitter.com/mr_nagoo" target="_blank"><i
+          class="icofont-twitter icofont-2x primary cursor-pointer"></i></a></div>
       </div>
       <div class="flex flex-col justify-center space-y-3" fxFlex="40" fxFlex.sm="45">
-        <small class="font-bold text-orange-500 text-lg tracking-wide" ngClass.xs="text-sm font-normal text-center">Hi, I
+        <small class="font-bold text-orange-500 text-lg tracking-wide" ngClass.xs="text-sm font-normal text-center">Hi,
+          I
           am</small>
-        <p class="py-3 name text-6xl tracking-widest" ngClass.sm="text-3xl" ngClass.md="text-2xl"ngClass.xs="text-4xl py-1 text-center">
+        <p class="py-3 name text-6xl tracking-widest" ngClass.md="text-2xl" ngClass.sm="text-3xl"
+           ngClass.xs="text-4xl py-1 text-center">
           NAGARAJAN S</p>
-        <p class="font-bold text-2xl tracking-wider primary" ngClass.xs="text-lg py-0 tracking-wider text-center">Software Developer</p>
-        <p class="tracking-wide py-5 p font-medium leading-5 justify-center text-gray-400" ngClass.xs="text-center"> I am
+        <p class="font-bold text-2xl tracking-wider primary" ngClass.xs="text-lg py-0 tracking-wider text-center">
+          Software Developer</p>
+        <p class="tracking-wide py-5 p font-medium leading-5 justify-center text-gray-400" ngClass.xs="text-center"> I
+          am
           NaGoo, an Angular developer. I am passionate
           about developing elegant websites. I am young into my career, constantly learning and hoping to share.</p>
         <div class="flex justify-start space-x-5 my-10" ngClass.xs="my-10 justify-center">
-<!--          <button type="button" class="px-6 py-3 rounded-full bg-orange-500" (click)="downloadAsPDF('resume')"><span class="font-medium text-white">Download CV</span>-->
-          <button type="button" class="px-6 py-3 rounded-full bg-orange-500" (click)="openDialog()"><span class="font-medium text-white">Download CV</span>
+          <!--          <button type="button" class="px-6 py-3 rounded-full bg-orange-500" (click)="downloadAsPDF('resume')"><span class="font-medium text-white">Download CV</span>-->
+          <button (click)="openDialog()" class="px-6 py-3 rounded-full bg-orange-500" type="button"><span
+            class="font-medium text-white">Download CV</span>
           </button>
-          <button type="button"
-                  matRipple
-                  (click)="openDialog()"
-                  [matRippleCentered]="true" class="px-6 py-3 rounded-full border-2 border-orange-500"><p class="font-medium primary">Contact Me</p>
+          <button (click)="openDialog()"
+                  [matRippleCentered]="true"
+                  class="px-6 py-3 rounded-full border-2 border-orange-500"
+                  matRipple type="button"><p
+            class="font-medium primary">Contact Me</p>
           </button>
         </div>
       </div>
@@ -48,7 +58,7 @@
               <i class="text-orange-500 icofont-badge icofont-2x" fxHide.gt-xs></i>
             </div>
             <div class="pt-2">
-              <p class="font-medium text-lg primary" ngClass.xs="text-xs">2 Years Job</p>
+              <p class="font-medium text-lg primary" ngClass.xs="text-xs">3 Years Job</p>
               <small class="font-medium text-orange-500">Experience</small>
             </div>
           </div>
@@ -89,7 +99,7 @@
       <div fxLayout="row" fxLayout.xs="column-reverse"
            fxLayoutAlign="center center" fxLayoutGap="80px">
         <div class="w-full" fxFlex="25" fxFlex.sm="35">
-          <img class="introProfile" alt="profile" src="../../../assets/lottie/intro.gif">
+          <img alt="profile" class="introProfile" src="../../../assets/lottie/intro.gif">
         </div>
         <div fxFlex="40">
           <div class="flex flex-col justify-start">
@@ -98,7 +108,8 @@
             <p class="pt-3 name text-5xl tracking-widest" ngClass.sm="text-3xl" ngClass.xs="text-4xl py-1 text-center">
               About
               Me</p>
-            <p class="tracking-wide py-5 text-gray-600 font-medium leading-5 justify-center" ngClass.xs="text-center">&nbsp;&nbsp;&nbsp; I
+            <p class="tracking-wide py-5 text-gray-600 font-medium leading-5 justify-center" ngClass.xs="text-center">
+              &nbsp;&nbsp;&nbsp; I
               am NaGoo, an
               Angular developer. I am passionate
               about developing elegant websites. I am young into my career, constantly learning and hoping to share.</p>
@@ -251,10 +262,11 @@
         <p class="primary py-2 font-extrabold text-2xl sm:text-5xl lg:text-5xl">Awesome Journey</p>
       </div>
       <div fxLayout="row" fxLayout.xs="column-reverse">
-        <div fxFlex class="flex flex-col">
+        <div class="flex flex-col" fxFlex>
           <div><p class="py-2 px-3 sm:px-0 lg:px-0 md:px-0"><i
             class="icofont-user-suited text-xl sm:text-2xl lg:text-2xl primary"></i>
-            <span class="pl-3 tracking-wide text-2xl sm:text-2xl lg:text-2xl primary font-bold">Education</span></p></div>
+            <span class="pl-3 tracking-wide text-2xl sm:text-2xl lg:text-2xl primary font-bold">Education</span></p>
+          </div>
           <div class="my-5 pl-10 sm:pl-0 lg:pl-0">
             <ol class="mb-5 border-l-2 border-orange-500">
               <li>
@@ -319,7 +331,7 @@
                     <p class="font-bold text-md sm:text-lg lg:text-lg primary">ReadyAssist (HQ) - 24 Hrs Bike & Car
                       Breakdown Service - India</p>
                     <p class="font-medium text-md color1">Associate Software Engineer</p>
-                    <small class=" font-medium text-orange-300 text-xs">2020 - 2022</small>
+                    <small class=" font-medium text-orange-300 text-xs">2020 - 2023</small>
                   </div>
                 </div>
               </li>
@@ -337,33 +349,33 @@
         <p class="primary py-2 font-extrabold text-2xl sm:text-5xl lg:text-5xl">Recent Works</p>
       </div>
       <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center">
-<!--        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">-->
-<!--          <img class="rounded opacity-30" src="./assets/images/dashboard.png" alt="">-->
-<!--        </div>-->
-<!--        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">-->
-<!--          <img class="rounded opacity-50" src="./assets/images/admin.png" alt="">-->
-<!--        </div>-->
-        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">
-          <img class="rounded" src="./assets/projects/instatab.png" alt="">
+        <!--        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">-->
+        <!--          <img class="rounded opacity-30" src="./assets/images/dashboard.png" alt="">-->
+        <!--        </div>-->
+        <!--        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">-->
+        <!--          <img class="rounded opacity-50" src="./assets/images/admin.png" alt="">-->
+        <!--        </div>-->
+        <div class="m-3 bg-white p-8 rounded" fxFlex="30" fxFlex.xs="100">
+          <img alt="" class="rounded" src="./assets/projects/instatab.png">
         </div>
-        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">
-          <img class="rounded" src="./assets/projects/instamobile.png" alt="">
+        <div class="m-3 bg-white p-8 rounded" fxFlex="30" fxFlex.xs="100">
+          <img alt="" class="rounded" src="./assets/projects/instamobile.png">
         </div>
-        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">
-          <img class="rounded" src="./assets/projects/resume.png" alt="">
+        <div class="m-3 bg-white p-8 rounded" fxFlex="30" fxFlex.xs="100">
+          <img alt="" class="rounded" src="./assets/projects/resume.png">
         </div>
-        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">
-          <img class="rounded" src="./assets/projects/instagram.png" alt="">
+        <div class="m-3 bg-white p-8 rounded" fxFlex="30" fxFlex.xs="100">
+          <img alt="" class="rounded" src="./assets/projects/instagram.png">
         </div>
-        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">
-          <img class="rounded" src="./assets/images/cart.png" alt="">
+        <div class="m-3 bg-white p-8 rounded" fxFlex="30" fxFlex.xs="100">
+          <img alt="" class="rounded" src="./assets/images/cart.png">
         </div>
-        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">
-          <img class="rounded" src="./assets/images/login.png" alt="">
+        <div class="m-3 bg-white p-8 rounded" fxFlex="30" fxFlex.xs="100">
+          <img alt="" class="rounded" src="./assets/images/login.png">
         </div>
-<!--        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">-->
-<!--          <img class="rounded" src="./assets/images/iphone.jpeg" alt="">-->
-<!--        </div>-->
+        <!--        <div fxFlex="30" fxFlex.xs="100" class="m-3 bg-white p-8 rounded">-->
+        <!--          <img class="rounded" src="./assets/images/iphone.jpeg" alt="">-->
+        <!--        </div>-->
       </div>
       <div class="mt-8 flex justify-center">
         <button class="bg-orange-500 text-white tracking-wider rounded px-5 py-2">View All</button>
@@ -374,5 +386,7 @@
 
 
 <div class="fixed z-50 bottom-6 rounded-full bg-white shadow-lg right-6 animate-bounce">
-  <button mat-icon-button type="button" (click)="openChatBot()"><mat-icon class="font-medium text-orange-500">contact_support</mat-icon></button>
+  <button (click)="openChatBot()" mat-icon-button type="button">
+    <mat-icon class="font-medium text-orange-500">contact_support</mat-icon>
+  </button>
 </div>

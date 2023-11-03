@@ -31,15 +31,19 @@ export class ChatBotComponent implements OnInit {
 
   constructor(
     private bottomSheetRef: MatBottomSheetRef<ChatBotComponent>,
-    public readonly fb : FormBuilder,
-    public readonly chatService : ChatService,
+    public readonly fb: FormBuilder,
+    public readonly chatService: ChatService,
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any
   ) {
     this.chatForm = this.fb.group({
       msg: ['']
     });
     const a = new Date().getHours();
-    this.chatService.messages.next([{isMe: true, msg: `${a < 12 ? 'Good Morning!': a < 18 ? 'Good Afternoon' : 'Good Evening'}, How can I help you?`, time: ''}]);
+    this.chatService.messages.next([{
+      isMe: true,
+      msg: `${a < 12 ? 'Good Morning!' : a < 18 ? 'Good Afternoon' : 'Good Evening'}, How can I help you?`,
+      time: ''
+    }]);
   }
 
   ngOnInit(): void {
@@ -58,7 +62,8 @@ export class ChatBotComponent implements OnInit {
   scrollToBottom(): void {
     try {
       this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
-    } catch(err) { }
+    } catch (err) {
+    }
   }
 
   sendMessage() {
@@ -70,7 +75,7 @@ export class ChatBotComponent implements OnInit {
       } else {
         if (text.includes('fuck') || text.includes('love') || text.includes('ex')) {
           this.assignMessage('SORRY!, I dont have answer for that...', true);
-        } else if (text.includes('Bye') ||text.includes('bye') || text.includes('get lost')) {
+        } else if (text.includes('Bye') || text.includes('bye') || text.includes('get lost')) {
           this.assignMessage('Ok, Bye.', true);
         } else if (text.includes('sorry') || text.includes('sry') || text.includes('Sorry') || text.includes('SORRY')) {
           this.assignMessage('hmm.', false);
@@ -91,11 +96,9 @@ export class ChatBotComponent implements OnInit {
           this.assignMessage('Hello, Im ChatBot version0.1. How can I help you?', false);
         } else if (text.includes('nothing') || text.includes('no need') || text.includes('no') || text.includes('No')) {
           this.assignMessage('Okay then, Bye Take Care.', true);
-        }else if (text.includes('ok') || text.includes('Ok') || text.includes('OK') || text.includes('Okay') || text.includes('okay')) {
+        } else if (text.includes('ok') || text.includes('Ok') || text.includes('OK') || text.includes('Okay') || text.includes('okay')) {
           this.assignMessage('Okay.How can I help you?', false);
-        }
-
-        else {
+        } else {
           this.assignMessage('SORRY!, I dont get it properly.', true);
         }
       }
@@ -104,10 +107,11 @@ export class ChatBotComponent implements OnInit {
       this.chatForm.patchValue({msg: ''});
     }
   }
+
   assignMessage(msg: any, close: boolean) {
     this.isEnable = true;
     setTimeout(() => {
-      this.msgs.push({isMe: true, msg , time: this.today});
+      this.msgs.push({isMe: true, msg, time: this.today});
       this.isEnable = false;
       if (close) {
         this.closeSheet();
@@ -129,7 +133,7 @@ export class ChatBotComponent implements OnInit {
     }
   }
 
-  close(){
+  close() {
     this.bottomSheetRef.dismiss();
   }
 

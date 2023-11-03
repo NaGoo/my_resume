@@ -40,25 +40,25 @@
           <form [formGroup]="mailForm">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 sm:gap-4 lg:gap-4">
               <mat-form-field appearance="outline" floatLabel="always">
-                <input type="text" matInput placeholder="Name" formControlName="name">
+                <input formControlName="name" matInput placeholder="Name" type="text">
               </mat-form-field>
               <mat-form-field appearance="outline">
-                <input type="tel" matInput maxlength="10" placeholder="mobile" formControlName="mobile">
+                <input formControlName="mobile" matInput maxlength="10" placeholder="mobile" type="tel">
               </mat-form-field>
             </div>
             <mat-form-field appearance="outline" class="w-full">
-              <input type="text" matInput placeholder="Subject" formControlName="subject">
+              <input formControlName="subject" matInput placeholder="Subject" type="text">
             </mat-form-field>
             <mat-form-field appearance="outline" class="w-full">
-              <textarea type="text" matInput rows="4" placeholder="Message" formControlName="message"></textarea>
+              <textarea formControlName="message" matInput placeholder="Message" rows="4" type="text"></textarea>
             </mat-form-field>
-            <button class="text-white font-medium tracking-wide px-5 py-3 rounded-full bg-orange-500"
-                    (click)="sendMail()">Send Message
+            <button (click)="sendMail()"
+                    class="text-white font-medium tracking-wide px-5 py-3 rounded-full bg-orange-500">Send Message
             </button>
           </form>
         </div>
         <div fxFlex="30" fxFlex.xs="10" fxLayout="column">
-          <div type="tel" class="flex mb-5 space-x-2 lg:space-x-5 sm:space-x-5">
+          <div class="flex mb-5 space-x-2 lg:space-x-5 sm:space-x-5" type="tel">
             <div class="pt-3"><i class="icofont-ui-call text-lg text-white p-3 bg-orange-500 rounded-full"></i></div>
             <div>
               <p class="primary font-bold text-lg tracking-wide">Call Me</p>
@@ -96,6 +96,14 @@
           <small class="text-white font-medium">|</small>
           <small class="text-white font-medium">CSS</small>
           <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">Bootstrap</small>
+          <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">Tailwind</small>
+          <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">JavaScript</small>
+          <small class="text-white font-medium">|</small>
+          <small class="text-white font-medium">Angular</small>
+          <small class="text-white font-medium">|</small>
           <small class="text-white font-medium">NodeJS</small>
           <small class="text-white font-medium">|</small>
           <small class="text-white font-medium">NestJS</small>
@@ -105,30 +113,20 @@
           <small class="text-white font-medium">MySQL</small>
           <small class="text-white font-medium">|</small>
           <small class="text-white font-medium">MongoDb</small>
-          <small class="text-white font-medium">|</small>
-          <small class="text-white font-medium">Angular</small>
-          <small class="text-white font-medium">|</small>
-          <small class="text-white font-medium">Bootstrap</small>
-          <small class="text-white font-medium">|</small>
-          <small class="text-white font-medium">Tailwind</small>
-          <small class="text-white font-medium">|</small>
-          <small class="text-white font-medium">JavaScript</small>
-          <small class="text-white font-medium">|</small>
-          <small class="text-white font-medium">TypeScript</small>
         </div>
         <div class="my-3 flex justify-center">
           <div class="p-3"><a href="https://github.com/NaGoo" target="_blank"><i
             class="icofont-github text-lg bg-orange-500 rounded p-1.5 text-white cursor-pointer"></i>
           </a></div>
-          <div class="p-3"><a href="https://www.instagram.com/mr_nagoo" target="_blank">
+          <div class="p-3"><a href="https://www.instagram.com/living_whimsic" target="_blank">
             <i class="icofont-instagram text-lg bg-orange-500 rounded p-1.5 text-white cursor-pointer"></i></a></div>
           <div class="p-3"><a href="https://www.linkedin.com/in/nagarajan-s-9898b6191/" target="_blank"><i
             class="icofont-linkedin text-lg bg-orange-500 rounded p-1.5 text-white cursor-pointer"></i></a></div>
-          <div class="p-3"><a href="https://twitter.com/mr_nagoo" target="_blank"><i
-            class="icofont-twitter text-lg bg-orange-500 rounded p-1.5 text-white cursor-pointer"></i></a>
-          </div>
+<!--          <div class="p-3"><a href="https://twitter.com/mr_nagoo" target="_blank"><i-->
+<!--            class="icofont-twitter text-lg bg-orange-500 rounded p-1.5 text-white cursor-pointer"></i></a>-->
+<!--          </div>-->
         </div>
-        <em class="text-center text-gray-300 py-3 font-normal">nagarajan.subramanian513@gmail.com</em>
+        <em class="text-center text-gray-300 py-3 font-normal">nagucse05@gmail.com</em>
       </div>
     </div>
   </div>

@@ -5,9 +5,11 @@
   background-color: #ffffff;
   width: 100vw;
 }
-:host ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick  {
+
+:host ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
   color: #F87315;
 }
+
 .gradient {
   position: absolute;
   z-index: 1000;
